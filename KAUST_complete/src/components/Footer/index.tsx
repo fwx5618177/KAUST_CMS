@@ -14,22 +14,22 @@ export default () => {
       copyright={`2020 ${defaultMessage}`}
       links={[
         {
-          key: 'Ant Design Pro',
-          title: 'Ant Design Pro',
-          href: 'https://pro.ant.design',
-          blankTarget: true,
+          key: 'Made by',
+          title: 'Made by',
+          href: '',
+          blankTarget: false,
         },
         {
           key: 'github',
           title: <GithubOutlined />,
-          href: 'https://github.com/ant-design/ant-design-pro',
+          href: 'https://github.com/fwx5618177/',
           blankTarget: true,
         },
         {
-          key: 'Ant Design',
-          title: 'Ant Design',
-          href: 'https://ant.design',
-          blankTarget: true,
+          key: 'wenxuan feng',
+          title: 'wenxuan feng',
+          href: '',
+          blankTarget: false,
         },
       ]}
     />

@@ -3,9 +3,9 @@ export default {
   'pages.login.accountLogin.tab': 'アカウントログイン',
   'pages.login.accountLogin.errorMessage':
     'ユーザー名/パスワードが正しくありません（admin/ant.design)',
-  'pages.login.username.placeholder': 'ユーザー名：adminまたはuser',
+  'pages.login.username.placeholder': 'ユーザー名を入力してください！',
   'pages.login.username.required': 'ユーザー名を入力してください！',
-  'pages.login.password.placeholder': 'パスワード：ant.design',
+  'pages.login.password.placeholder': 'パスワードを入力してください！',
   'pages.login.password.required': 'パスワードを入力してください！',
   'pages.login.phoneLogin.tab': '電話ログイン',
   'pages.login.phoneLogin.errorMessage': '検証コードエラー',
