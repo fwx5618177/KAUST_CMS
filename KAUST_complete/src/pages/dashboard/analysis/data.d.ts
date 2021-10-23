@@ -44,3 +44,9 @@ export interface AnalysisData {
   salesTypeDataOffline: DataItem[];
   radarData: RadarData[];
 }
+
+export type RankingListData = {
+  title: string;
+  time?: date;
+  ip?: string;
+};
