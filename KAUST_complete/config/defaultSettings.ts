@@ -14,7 +14,7 @@ const Settings: LayoutSettings & {
   colorWeak: false,
   title: 'Polarization Toolbox',
   pwa: false,
-  logo: 'public/logo.svg',
+  // logo: '/public/favicon.ico',
   iconfontUrl: '',
 };
 

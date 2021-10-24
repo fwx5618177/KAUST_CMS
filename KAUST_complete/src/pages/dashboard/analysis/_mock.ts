@@ -129,12 +129,12 @@ for (let i = 0; i < 20; i += 1) {
   const date = moment(new Date().getTime() + 1000 * 60 * 30 * i).format('HH:mm');
   offlineChartData.push({
     date,
-    type: '客流量',
+    type: '访问流量',
     value: Math.floor(Math.random() * 100) + 10,
   });
   offlineChartData.push({
     date,
-    type: '支付笔数',
+    type: '点击次数',
     value: Math.floor(Math.random() * 100) + 10,
   });
 }
