@@ -1,11 +1,11 @@
 import { Space } from 'antd';
-import { QuestionCircleOutlined } from '@ant-design/icons';
+// import { QuestionCircleOutlined } from '@ant-design/icons';
 import React from 'react';
 import { useModel, SelectLang } from 'umi';
 import Avatar from './AvatarDropdown';
-import HeaderSearch from '../HeaderSearch';
+// import HeaderSearch from '../HeaderSearch';
 import styles from './index.less';
-import NoticeIconView from '../NoticeIcon';
+// import NoticeIconView from '../NoticeIcon';
 export type SiderTheme = 'light' | 'dark';
 
 const GlobalHeaderRight: React.FC = () => {
@@ -24,17 +24,17 @@ const GlobalHeaderRight: React.FC = () => {
 
   return (
     <Space className={className}>
-      <HeaderSearch
+      {/* <HeaderSearch
         className={`${styles.action} ${styles.search}`}
         placeholder="站内搜索"
-        defaultValue="umi ui"
+        defaultValue="Test1"
         options={[
           {
-            label: <a href="https://umijs.org/zh/guide/umi-ui.html">umi ui</a>,
-            value: 'umi ui',
+            label: <a href="/">Test1</a>,
+            value: 'Test1',
           },
           {
-            label: <a href="next.ant.design">Ant Design</a>,
+            label: <a href="next.ant.design">Test2</a>,
             value: 'Ant Design',
           },
           {
@@ -48,16 +48,16 @@ const GlobalHeaderRight: React.FC = () => {
         ]} // onSearch={value => {
         //   console.log('input', value);
         // }}
-      />
-      <span
+      /> */}
+      {/* <span
         className={styles.action}
         onClick={() => {
-          window.open('https://pro.ant.design/docs/getting-started');
+          window.open('https://github.com/fwx5618177');
         }}
       >
         <QuestionCircleOutlined />
-      </span>
-      <NoticeIconView />
+      </span> */}
+      {/* <NoticeIconView /> */}
       <Avatar menu />
       <SelectLang className={styles.action} />
     </Space>

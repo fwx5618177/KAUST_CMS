@@ -172,12 +172,12 @@ export default defineConfig({
       name: 'profile',
       icon: 'profile',
       routes: [
-        {
-          name: 'basic',
-          icon: 'smile',
-          path: '/profile/basic',
-          component: './profile/basic',
-        },
+        // {
+        //   name: 'basic',
+        //   icon: 'smile',
+        //   path: '/profile/basic',
+        //   component: './profile/basic',
+        // },
         {
           name: 'advanced',
           icon: 'smile',
@@ -235,12 +235,12 @@ export default defineConfig({
       icon: 'user',
       path: '/account',
       routes: [
-        {
-          name: 'center',
-          icon: 'smile',
-          path: '/account/center',
-          component: './account/center',
-        },
+        // {
+        //   name: 'center',
+        //   icon: 'smile',
+        //   path: '/account/center',
+        //   component: './account/center',
+        // },
         {
           name: 'settings',
           icon: 'smile',
