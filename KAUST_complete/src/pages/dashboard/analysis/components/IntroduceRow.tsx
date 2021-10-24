@@ -6,7 +6,6 @@ import numeral from 'numeral';
 import { ChartCard, Field } from './Charts';
 import type { DataItem } from '../data.d';
 import Trend from './Trend';
-import Yuan from '../utils/Yuan';
 import styles from '../style.less';
 
 const topColResponsiveProps = {

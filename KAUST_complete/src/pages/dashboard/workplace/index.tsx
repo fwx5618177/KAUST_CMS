@@ -7,7 +7,7 @@ import { PageContainer } from '@ant-design/pro-layout';
 import moment from 'moment';
 import EditableLinkGroup from './components/EditableLinkGroup';
 import styles from './style.less';
-import type { ActivitiesType, CurrentUser } from './data.d';
+import { ActivitiesType, CurrentUser, getTimeRemainder, timeRemainder} from './data.d';
 import { queryProjectNotice, queryActivities, fakeChartData } from './service';
 
 const links = [
@@ -37,6 +37,8 @@ const links = [
   },
 ];
 
+const timeRemainders: timeRemainder<string, number> = getTimeRemainder(new Date())
+
 const PageHeaderContent: FC<{ currentUser: Partial<CurrentUser> }> = ({ currentUser }) => {
   const loading = currentUser && Object.keys(currentUser).length;
   if (!loading) {
@@ -49,9 +51,9 @@ const PageHeaderContent: FC<{ currentUser: Partial<CurrentUser> }> = ({ currentU
       </div>
       <div className={styles.content}>
         <div className={styles.contentTitle}>
-          早安，
+          {timeRemainders.greeting}，
           {currentUser.name}
-          ，祝你开心每一天！
+          ，{timeRemainders.msg}
         </div>
         <div>
           {currentUser.title} |{currentUser.group}
@@ -64,13 +66,15 @@ const PageHeaderContent: FC<{ currentUser: Partial<CurrentUser> }> = ({ currentU
 const ExtraContent: FC<Record<string, any>> = () => (
   <div className={styles.extraContent}>
     <div className={styles.statItem}>
-      <Statistic title="项目数" value={56} />
+      <Statistic title="身份" value="管理员" />
     </div>
     <div className={styles.statItem}>
-      <Statistic title="团队内排名" value={8} suffix="/ 24" />
+      <Statistic title="目前任务进度" value={8} suffix="/ 24" />
     </div>
     <div className={styles.statItem}>
-      <Statistic title="项目访问" value={2223} />
+      <Statistic title="最新任务" value="准则">
+        {/* <Link to="/">实验室管理准则</Link> */}
+      </Statistic>
     </div>
   </div>
 );
@@ -117,13 +121,13 @@ const Workplace: FC = () => {
       content={
         <PageHeaderContent
           currentUser={{
-            avatar: 'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png',
-            name: '吴彦祖',
+            avatar: 'https://github.com/fwx5618177',
+            name: '冯文轩',
             userid: '00000001',
-            email: 'antdesign@alipay.com',
+            email: 'fengwenxuan2006@126.com',
             signature: '海纳百川，有容乃大',
-            title: '交互专家',
-            group: '蚂蚁金服－某某某事业群－某某平台部－某某技术部－UED',
+            title: '开发者',
+            group: '网站建设者',
           }}
         />
       }
@@ -192,7 +196,7 @@ const Workplace: FC = () => {
           <Card
             style={{ marginBottom: 24 }}
             bordered={false}
-            title="XX 指数"
+            title="实验进度指数"
             loading={data?.radarData?.length === 0}
           >
             <div className={styles.chart}>
@@ -217,7 +221,7 @@ const Workplace: FC = () => {
           <Card
             bodyStyle={{ paddingTop: 12, paddingBottom: 12 }}
             bordered={false}
-            title="团队"
+            title="分配任务组"
             loading={projectLoading}
           >
             <div className={styles.members}>

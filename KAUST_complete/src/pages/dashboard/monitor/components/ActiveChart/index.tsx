@@ -66,8 +66,8 @@ export default class ActiveChart extends Component {
         {activeData && (
           <div>
             <div className={styles.activeChartGrid}>
-              <p>{[...activeData].sort()[activeData.length - 1].y + 200} 亿元</p>
-              <p>{[...activeData].sort()[Math.floor(activeData.length / 2)].y} 亿元</p>
+              <p>{[...activeData].sort()[activeData.length - 1].y + 200}</p>
+              <p>{[...activeData].sort()[Math.floor(activeData.length / 2)].y}</p>
             </div>
             <div className={styles.dashedLine}>
               <div className={styles.line} />
