@@ -16,6 +16,7 @@
     "noUnusedLocals": true,
     "allowJs": true,
     "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
     "experimentalDecorators": true,
     "strict": true,
     "paths": {
@@ -24,7 +25,7 @@
     }
   },
   "include": [
-    "mock/**/*",
+    "dist/mock/**/*",
     "src/**/*",
     "tests/**/*",
     "test/**/*",
@@ -35,7 +36,7 @@
     ".stylelintrc.js",
     ".prettierrc.js",
     "jest.config.js",
-    "mock/*"
+    "dist/mock/*"
   ],
   "exclude": ["node_modules", "build", "dist", "scripts", "src/.umi/*", "webpack", "jest"]
 }
