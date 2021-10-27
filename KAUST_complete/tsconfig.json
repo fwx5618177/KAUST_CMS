@@ -36,7 +36,8 @@
     ".stylelintrc.js",
     ".prettierrc.js",
     "jest.config.js",
-    "dist/mock/*"
+    "dist/mock/*",
+    "pm2.config.js",
   ],
-  "exclude": ["node_modules", "build", "dist", "scripts", "src/.umi/*", "webpack", "jest"]
+  "exclude": ["node_modules", "build", "dist", "scripts", "src/.umi/*", "webpack", "jest", "pm2"]
 }
