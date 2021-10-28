@@ -1,15 +1,11 @@
 const fs = require('fs');
 
-const open = (async (file, encode) => {
-    let views;
-    const files = await fs.readFile(file, { encoding: encode }, (err, data) => {
-        if(err) throw err;
-        views = data;
-    });
+const open = function* (file, encode) {
+    let files
+    yield files = fs.readFileSync(file, { encoding: encode });
     
-
-    return views;
-})
+    return files;
+}
 
 module.exports = {
     open

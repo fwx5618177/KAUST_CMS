@@ -14,8 +14,10 @@ http.createServer(async (req, res) => {
         });
 
         const data = open(dist, 'utf-8');
-        console.log(data);
-        res.end(data);
+        console.log(data.next());
+        const { value } = data.next();
+        // res.end(new Buffer(data, 'utf-8'));
+        res.end(value)
     }
 
     
