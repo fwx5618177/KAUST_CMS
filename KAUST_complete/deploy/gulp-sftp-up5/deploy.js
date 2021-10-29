@@ -4,7 +4,7 @@
  */
 const gulp = require('gulp');
 const sftp = require('gulp-sftp-up5');
-const CONFIG = require('./.env.sftp.json');
+const CONFIG = require('../../.env.sftp.json');
 
 const sftpConfig = {
     test: {
