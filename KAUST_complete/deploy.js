@@ -8,9 +8,9 @@ const CONFIG = require('./.env.sftp.json');
 
 const sftpConfig = {
     test: {
-        remotePath: '',
+        remotePath: CONFIG.test.remotePath,
         SFTP: 'test',
-        removeCurrentFolderFiles: true
+        removeCurrentFolderFiles: true,
     },
     prod: {
         remotePath: '',
@@ -19,6 +19,11 @@ const sftpConfig = {
     }
 };
 
+const result = {
+    ...sftpConfig[process.env.APP_ENV],
+    ...CONFIG[process.env.APP_ENV],
+}
+console.log(result);
 gulp
 .src('./' + CONFIG.outputDir + "/**")
-.pipe(sftp(sftpConfig[process.env.APP_ENV]));
+.pipe(sftp(result));
