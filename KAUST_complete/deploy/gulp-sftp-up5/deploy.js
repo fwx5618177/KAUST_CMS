@@ -10,7 +10,7 @@ const sftpConfig = {
     test: {
         remotePath: CONFIG.test.remotePath,
         SFTP: 'test',
-        removeCurrentFolderFiles: true,
+        removeCurrentFolderFiles: false,
     },
     prod: {
         remotePath: '',
