@@ -10,7 +10,7 @@ module.exports = {
 
   deploy : {
     production : {
-      user : 'fwx',
+      user : 'root',
       host : ['49.233.64.173'],
       port: "65534",
       ref  : 'origin/master',
@@ -20,8 +20,8 @@ module.exports = {
       'pre-setup': "echo 'This is a pre-setup command'",
       'post-setup': "ls -al",
       'pre-deploy-local': 'echo "This is a pre-deploy command"',
-      // 'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production',
-      'post-deploy' : 'npm install && npm run build && nginx reload',
+      // 'post-deploy' : 'cd /home/fwx/source/KAUST_CMS/KAUST_complete && npm install && pm2 reload ecosystem.config.js --env production',
+      'post-deploy' : 'cd KAUST_complete && npm install && npm run build && nginx -s reload',
     }
   }
 };
