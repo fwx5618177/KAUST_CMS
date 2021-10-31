@@ -10,6 +10,7 @@ _roadhog-api-doc
 /dist
 /.vscode
 .env.sftp.json
+deploy.yaml
 
 # misc
 .DS_Store
