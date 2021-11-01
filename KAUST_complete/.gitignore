@@ -11,6 +11,7 @@ _roadhog-api-doc
 /.vscode
 .env.sftp.json
 deploy.yaml
+pm2.config.json
 
 # misc
 .DS_Store

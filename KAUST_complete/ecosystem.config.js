@@ -1,3 +1,8 @@
+const fs = require('fs');
+
+const config = JSON.parse(fs.readFileSync('./pm2.config.json', { encoding: 'utf-8' }));
+
+console.log(config.prod.user);
 module.exports = {
   apps : [{
     name: "KAUST_CMS",
@@ -10,18 +15,18 @@ module.exports = {
 
   deploy : {
     production : {
-      user : 'root',
-      host : ['49.233.64.173'],
-      port: "65534",
-      ref  : 'origin/master',
-      repo : 'git@github.com:fwx5618177/KAUST_CMS.git',
-      path : '/home/fwx',
+      user : config.prod.user,
+      host : [config.prod.host],
+      port: config.prod.port,
+      ref  : config.prod.ref,
+      repo : config.prod.repo,
+      path : config.prod.path,
       'ssh_options': 'StrictHostKeyChecking=no',
       'pre-setup': "echo 'This is a pre-setup command'",
       'post-setup': "ls -al",
       'pre-deploy-local': 'echo "This is a pre-deploy command"',
       // 'post-deploy' : 'cd /home/fwx/source/KAUST_CMS/KAUST_complete && npm install && pm2 reload ecosystem.config.js --env production',
-      'post-deploy' : 'cd KAUST_complete && npm install && npm run build && nginx -s reload',
+      'post-deploy' : 'git pull origin master && cd KAUST_complete && npm install && npm run build && nginx -s reload',
     }
   }
 };
