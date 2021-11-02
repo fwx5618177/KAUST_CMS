@@ -26,7 +26,7 @@ module.exports = {
       'post-setup': "ls -al",
       'pre-deploy-local': 'echo "This is a pre-deploy command"',
       // 'post-deploy' : 'cd /home/fwx/source/KAUST_CMS/KAUST_complete && npm install && pm2 reload ecosystem.config.js --env production',
-      'post-deploy' : 'git pull origin master && cd KAUST_complete && npm install && npm run build && nginx -s reload',
+      'post-deploy' : 'git pull origin master && cd KAUST_complete && npm install --registry=https://registry.npm.taobao.org && npm run build && nginx -s reload',
     }
   }
 };
