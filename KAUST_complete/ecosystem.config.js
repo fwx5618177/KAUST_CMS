@@ -1,8 +1,12 @@
+/**
+ * 部署的配置文件
+ */
 const fs = require('fs');
+const { ReadFile } = require('./pm2/util/readFile');
+// const config = JSON.parse(fs.readFileSync('./pm2.config.json', { encoding: 'utf-8' }));
+const config = ReadFile.readToJson('./pm2.config.json');
 
-const config = JSON.parse(fs.readFileSync('./pm2.config.json', { encoding: 'utf-8' }));
-
-console.log(config.prod.user);
+// console.log('config:', config);
 module.exports = {
   apps : [{
     name: "KAUST_CMS",
