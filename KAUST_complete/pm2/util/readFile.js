@@ -27,7 +27,8 @@ class ReadFile {
     static async readFileLine(fileName) {
         const file = path.join(__dirname, '../..', fileName);
         const content = await this.readByLine(file);
-
+        // console.log('content:', content);
+        
         return content;
     }
 
@@ -47,13 +48,14 @@ class ReadFile {
             });
 
             rl.on('line', line => {
-                console.log('\x1B[43m line: \x1B[0m', line);
+                // console.log('\x1B[43m line: \x1B[0m', line);
                 content.push(line);
             });
     
-            rl.on('close', async () => console.log('\x1B[43m 文件已经读取完毕. \x1B[0m'));
-    
-            resolve(content);
+            rl.on('close', () => {
+                console.log('\x1B[43m 文件已经读取完毕. \x1B[0m');
+                resolve(content);
+            });
         })
     }
 }
