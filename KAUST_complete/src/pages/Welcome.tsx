@@ -4,13 +4,13 @@ import { Card, Alert, Typography } from 'antd';
 import { useIntl, FormattedMessage } from 'umi';
 import styles from './Welcome.less';
 
-const CodePreview: React.FC = ({ children }) => (
-  <pre className={styles.pre}>
-    <code>
-      <Typography.Text copyable>{children}</Typography.Text>
-    </code>
-  </pre>
-);
+// const CodePreview: React.FC = ({ children }) => (
+//   <pre className={styles.pre}>
+//     <code>
+//       <Typography.Text copyable>{children}</Typography.Text>
+//     </code>
+//   </pre>
+// );
 
 export default (): React.ReactNode => {
   const intl = useIntl();
@@ -30,7 +30,7 @@ export default (): React.ReactNode => {
             marginBottom: 24,
           }}
         />
-        <Typography.Text strong>
+        {/* <Typography.Text strong>
           <FormattedMessage id="pages.welcome.advancedComponent" defaultMessage="Advanced Form" />{' '}
           <a
             href="https://procomponents.ant.design/components/table"
@@ -39,9 +39,9 @@ export default (): React.ReactNode => {
           >
             <FormattedMessage id="pages.welcome.link" defaultMessage="Welcome" />
           </a>
-        </Typography.Text>
-        <CodePreview>yarn add @ant-design/pro-table</CodePreview>
-        <Typography.Text
+        </Typography.Text> */}
+        {/* <CodePreview>yarn add @ant-design/pro-table</CodePreview> */}
+        {/* <Typography.Text
           strong
           style={{
             marginBottom: 12,
@@ -56,7 +56,7 @@ export default (): React.ReactNode => {
             <FormattedMessage id="pages.welcome.link" defaultMessage="Welcome" />
           </a>
         </Typography.Text>
-        <CodePreview>yarn add @ant-design/pro-layout</CodePreview>
+        <CodePreview>yarn add @ant-design/pro-layout</CodePreview> */}
       </Card>
     </PageContainer>
   );

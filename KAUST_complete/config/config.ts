@@ -64,6 +64,12 @@ export default defineConfig({
       ],
     },
     {
+      name: 'welcome',
+      path: '/welcome',
+      icon: 'smile',
+      component: './welcome',
+    },
+    {
       path: '/dashboard',
       name: 'dashboard',
       icon: 'dashboard',
