@@ -290,19 +290,20 @@ const Login: React.FC = () => {
                 marginBottom: 24,
               }}
             >
-              <ProFormCheckbox noStyle name="autoLogin">
+              {/* <ProFormCheckbox noStyle name="autoLogin">
                 <FormattedMessage id="pages.login.rememberMe" defaultMessage="自动登录" />
-              </ProFormCheckbox>
-              <a
+              </ProFormCheckbox> */}
+              <div
                 style={{
                   float: 'right',
+                  marginBottom: 6,
                 }}
               >
                 <Space size={[16,16]}>
                 <Button id="pages.login.forgotPassword" type='primary' onClick={record => alert(record)}>注册</Button>
                 <Button id="pages.login.forgotPassword" type='primary' danger onClick={record => alert(record)}>忘记密码</Button>
                 </Space>
-              </a>
+              </div>
             </div>
           </ProForm>
           {/* <Space className={styles.other}>

@@ -30,6 +30,8 @@ export default (): React.ReactNode => {
             marginBottom: 24,
           }}
         />
+        
+        
         {/* <Typography.Text strong>
           <FormattedMessage id="pages.welcome.advancedComponent" defaultMessage="Advanced Form" />{' '}
           <a
